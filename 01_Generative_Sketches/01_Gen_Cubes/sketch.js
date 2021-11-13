@@ -10,7 +10,7 @@ var follow;
 
 function preload() {
   //Load music
-  music = loadSound("mechLoop.mp3");
+ // music = loadSound("mechLoop.mp3");
 
   //Load all images into array imgs
    for (var i = 0; i < numImgs; ++i) {
@@ -20,9 +20,8 @@ function preload() {
 
 function setup() {
   cnv = createCanvas(800, 800, WEBGL);
-  //p5 Gibber 
-  //drums = EDrums('x*o*x*o-');
-  //follow = Follow(drums);
+  music = loadSound("mechLoop.mp3");
+
 
    amp = new p5.Amplitude();
 
@@ -38,8 +37,8 @@ function setup() {
 
 function draw() {
   
- 
-  background(follow.getValue() * 255);
+ // follow.getValue() * 255
+  background(0);
   
    var level = amp.getLevel();
    var stage = amp.getLevel();
